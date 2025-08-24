@@ -1,0 +1,30 @@
+import random
+
+def fortune_cookie_game():
+    fortunes = [
+        "You will have a great day today!",
+        "An exciting opportunity lies ahead of you.",
+        "Happiness comes from within — cherish it.",
+        "You will meet someone who will change your life.",
+        "A pleasant surprise is waiting for you.",
+        "Success is on your way, keep going!",
+        "Good news will come to you by mail.",
+        "Your hard work will soon pay off.",
+        "Adventure can be real happiness.",
+        "A fresh start will put you on your way."
+    ]
+
+    print("🥠 Welcome to the Fortune Cookie Game! 🥠")
+    while True:
+        choice = input("\nWould you like to open a fortune cookie? (yes/no): ").strip().lower()
+        
+        if choice == "yes":
+            print("\nCracking the cookie open... 🥠✨\n")
+            print("Your Fortune: ", random.choice(fortunes))
+        elif choice == "no":
+            print("\nThanks for playing! Goodbye 👋")
+            break
+        else:
+            print("Please type 'yes' or 'no'.")
+
+fortune_cookie_game()
